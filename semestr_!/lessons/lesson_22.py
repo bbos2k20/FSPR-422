@@ -8,11 +8,8 @@ class Marker:
 
     # метод класс
     def draw(self,line_lenght):
-        while self.health > 0:
-            if self.health == 0:
-                print("фломастер уже умер")
-                break
-        self.health -= 1
+        if self.health <= 0:
+            return f"маркер умер"
         self.health -= line_lenght
 
 
@@ -37,10 +34,10 @@ print(marker_3.color)
 print(marker_3.size)
 
 
-print("health = ",marker.health)
-marker.draw(1)
-print("health =",marker.health)
+print("health  = ",marker.health)
+marker.draw(4)
+print("health ",marker.health)
 marker.draw(5)
-print("health =",marker.health)
-print(marker.draw(5))
-print("health =",marker.health)
+print("health ",marker.health)
+marker.draw(6)
+print("health ",marker.health)
