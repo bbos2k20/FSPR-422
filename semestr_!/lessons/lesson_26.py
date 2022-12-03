@@ -41,29 +41,50 @@ class Сustomer:
         self.email = email
         self.password = password
         self.card = card
+#       получение имени пользователя 
 
-    def get_name():
-        reg_name = input("write ur name: ")
-        for i in reg_name:
+    def get_name(self):
+        self.name = input("write ur name: ")
+        for i in self.name:
             if i.isdigit():
                 raise ValueError("Имя не должно содержать цифр!")
-    
+
+ #      получение email пользователя 
    
-   
-    def get_email():
-        check_mail= input("Write ur email with '@' !: ")[6:]
-        if "@" in check_mail:
+    def get_email(self):
+        self.email= input("Write ur email with '@' !: ")
+        if "@" in self.email:
             print ("данные получены!")
         else :
-            print("ARE u stupid?")
-    # print(get_email)
-    # get_email()
+            return print("ARE u stupid?")
 
-    def get_passwor():
-        password = input("Write ur passwor: ")[6:]
-        # if password <= len(password):
-            # print("WRONG!!")
-    print(get_passwor)
-    get_passwor
+#      получение пароля пользователя 
 
-   
+    def get_passwor(self):
+        self.password = input("Введите пароль: ")
+        if len(self.password) < 6:
+            print ("минимальное колличество символов 6! ")
+        else:
+            print ("пароль сохранён! ")
+
+
+#      получение пластик карты пользователя 
+
+    def get_card(self):
+        self.card = input("Введите пластик карту: ")
+        if len(self.card) == 16 :
+            print("Всё верно")
+        else:
+            print("что то не так. проверьте всё ли верно написали!")
+
+
+
+# class User:
+#     def check_name():
+#         name_checking =""
+#         if name_checking = 
+pr1=Сustomer(2,2,2,2)
+print(pr1.get_name())
+print(pr1.get_email())
+print(pr1.get_passwor())
+print(pr1.get_card())
